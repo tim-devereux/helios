@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<document>
+    <scannerSettings id="litch21_uls" active="true" pulseFreq_hz="100000" scanAngle_deg="23"/> 
+    <survey name="litch21_uls" platform="data/platforms.xml#copter_linearpath" scanner="data/scanners_als.xml#livox_mid-70" scene="data/scenes/litch21_uls/litch21_uls.xml#litch21_uls">
+        <!-- platform: quadcopter, deflector: rotating -->
+        
+        <!-- Start of the scan at the southwest corner -->
+        <leg>
+            <platformSettings x="-50.0" y="-50.0" z="35.0" onGround="false" movePerSec_m="5"/>
+            <scannerSettings template="litch21_uls" trajectoryTimeInterval_s="0.05"/>
+        </leg>
+
+        <!-- Move eastward along the first pass -->
+        <leg>
+            <platformSettings x="50.0" y="-50.0" z="35.0" onGround="false" movePerSec_m="5"/>
+            <scannerSettings template="litch21_uls" trajectoryTimeInterval_s="0.05"/>
+        </leg>
+        
+        <!-- Move north to the start of the second pass -->
+        <leg>
+            <platformSettings x="50.0" y="-40.0" z="35.0" onGround="false" movePerSec_m="5"/>
+            <scannerSettings template="litch21_uls" trajectoryTimeInterval_s="0.05"/>
+        </leg>
+        
+        <!-- Move westward along the second pass -->
+        <leg>
+            <platformSettings x="-50.0" y="-40.0" z="35.0" onGround="false" movePerSec_m="5"/>
+            <scannerSettings template="litch21_uls" trajectoryTimeInterval_s="0.05"/>
+        </leg>
+        
+        <!-- Repeat the pattern for the entire hectare -->
+        
+        <!-- Move north to the start of the third pass -->
+        <leg>
+            <platformSettings x="-50.0" y="-30.0" z="35.0" onGround="false" movePerSec_m="5"/>
+            <scannerSettings template="litch21_uls" trajectoryTimeInterval_s="0.05"/>
+        </leg>
+        
+        <!-- Move eastward along the third pass -->
+        <leg>
+            <platformSettings x="50.0" y="-30.0" z="35.0" onGround="false" movePerSec_m="5"/>
+            <scannerSettings template="litch21_uls" trajectoryTimeInterval_s="0.05"/>
+        </leg>
+
+        <!-- Continue the pattern until the entire plot is covered -->
+        
+        <!-- Move north to the final pass -->
+        <leg>
+            <platformSettings x="50.0" y="50.0" z="35.0" onGround="false" movePerSec_m="5"/>
+            <scannerSettings template="litch21_uls" trajectoryTimeInterval_s="0.05"/>
+        </leg>
+
+        <!-- Move westward along the final pass -->
+        <leg>
+            <platformSettings x="-50.0" y="50.0" z="35.0" onGround="false" movePerSec_m="5"/>
+            <scannerSettings template="litch21_uls" trajectoryTimeInterval_s="0.05"/>
+        </leg>
+
+    </survey>
+</document>

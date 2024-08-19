@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <scene id="litch21_uls" name="litch21_uls">
+        
+        <part>
+            <filter type="objloader">
+                <param type="string" key="filepath" value="data/sceneparts/litch21_uls/litch21_woody_mesh.obj" />
+                <param type="string" key="up" value="z" />
+            </filter>
+            
+            
+        </part>
+
+        <part>
+            <filter type="objloader">
+                <param type="string" key="filepath" value="data/sceneparts/litch21_uls/litch21_leaf_mesh.obj" />
+                <param type="string" key="up" value="z" />
+            </filter>
+            
+            
+        </part>
+
+        <part>
+            <filter type="objloader">
+                <param type="string" key="filepath" value="data/sceneparts/litch21_uls/litch21_ground_mesh.obj" />
+                <param type="string" key="up" value="z" />
+            </filter>
+            
+            
+        </part>
+
+        <part>
+            <filter type="xyzloader">
+                <param type="string" key="filepath" value="data/sceneparts/litch21_uls/litch21_us.xyz" />
+                <param type="string" key="separator" value=" " />
+                <param type="double" key="voxelSize" value="0.05" />
+                <!-- Normal estimation using Singular Value Decomposition (SVD)
+                MODE 1: simple mode / MODE 2: advanced mode for large files, which works in batches -->
+                <param type="int" key="estimateNormals" value="1" />
+                <!-- If less than three points fall into one voxel, it is discarded.
+                To avoid this, a default Normal can be assigned to these voxels with:-->
+                <param type="vec3" key="defaultNormal" value="0;0;1" /> 
+            </filter>
+            
+        </part>
+    </scene>
+</document>
